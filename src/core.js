@@ -1,5 +1,21 @@
-import {List} from 'immutable';
+// import {List} from 'immutable';
+//immutable is really cool and worth looking into
+//DO THIS IN THE FUTURE
+//for now i;m moving on inorder to get this up and running
+
 
 export function setChatLog(state, log){
-  return state.set('log', List(log));
+  return Object.assign({}, state, {
+    log: log
+  });
+}
+
+export function addChatEntry(state, entry){
+  return Object.assign({}, state, {
+    log: [
+        ...state.log,
+        entry
+      ]
+    }
+  );
 }
