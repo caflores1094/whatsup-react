@@ -3,6 +3,9 @@
 //DO THIS IN THE FUTURE
 //for now i;m moving on inorder to get this up and running
 
+//initial state in case we ever need to have an action call without 
+//a specified state
+export const INITIAL_STATE = {};
 
 export function setChatLog(state, log){
   return Object.assign({}, state, {
